@@ -1,0 +1,21 @@
+{
+  "name": "neliotek/packvariants",
+  "description": "Neliotek module to create pack variants",
+  "homepage": "https://neliotek.com",
+  "license": "neliotek",
+  "authors": [
+    {
+      "name": "Neliotek",
+      "email": "phares.chakour@neliotek.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "PackVariants\\": "src/"
+    },
+    "config": {
+      "prepend-autoloader": false
+    },
+    "type": "prestashop-module"
+  }
+}

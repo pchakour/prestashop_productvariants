@@ -59,6 +59,7 @@ class Pc_PackVariants extends Module
     public function hookActionFrontControllerSetMedia()
     {
         $this->context->controller->addJS($this->_path.'views/js/front/redirect_variant.js');
+        $this->context->controller->addCss($this->_path.'/views/css/front_variants_selector.css');
     }
 
     public function hookActionAdminControllerSetMedia($params)
@@ -136,9 +137,25 @@ class Pc_PackVariants extends Module
         
         if (empty($variants)) return '';
 
+        
         foreach ($variants as &$variant) {
             $variant['url'] = $this->context->link->getProductLink($variant['id_product']);
         }
+
+        $product_array = $product->getArrayCopy();
+        $variants = array_merge($variants, [$product_array]);
+
+        foreach ($variants as &$variant) {
+            $variant['is_current'] = $product_array['id'] == $variant['id_product'];
+            $name = $variant['name'];
+            if(preg_match_all('/\d+/', $name, $numbers)) {
+                $variant['size'] = end($numbers[0]);
+            }
+        }
+
+        usort($variants, function ($a, $b) {
+            return $a['size'] <=> $b['size'];
+        });
 
         $this->context->smarty->assign([
             'product_variants' => $variants,

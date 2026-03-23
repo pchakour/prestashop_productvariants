@@ -1,0 +1,10 @@
+.product-variants-selector {
+    margin-top: 11px;
+    margin-bottom: 15px !important;
+}
+
+.product-variants-selector .size{
+    font-size: medium;
+    padding-left: 3px;
+    padding-right: 10px;
+}

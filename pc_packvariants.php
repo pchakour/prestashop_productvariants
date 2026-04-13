@@ -11,7 +11,7 @@ class Pc_PackVariants extends Module
     public function __construct()
     {
         $this->name = 'pc_packvariants';
-        $this->version = '0.0.1';
+        $this->version = '0.0.2';
         $this->author = 'Pharès CHAKOUR';
         $this->tab = 'front_office_features';
         $this->need_instance = 0;

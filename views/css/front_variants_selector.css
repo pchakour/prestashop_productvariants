@@ -1,10 +1,24 @@
 .product-variants-selector {
-    margin-top: 11px;
-    margin-bottom: 15px !important;
+    margin-top: 25px;
+    margin-bottom: 30px !important;
 }
 
-.product-variants-selector .size{
+.product-variants-selector .product_size_variant {
     font-size: medium;
-    padding-left: 3px;
-    padding-right: 10px;
+    font-weight: 600;
+    padding: 10px;
+    background: rgb(237 237 237);
+    margin-right: 5px;
+    border-radius: 5px;
+    border: 1px solid #e7e7e7;
+    cursor: pointer;
+}
+
+.product-variants-selector .product_size_variant {
+    color: #6b6b6b;
+}
+
+.product-variants-selector .product_size_variant.checked{
+    border: 1px solid var(--primary);
+    color: var(--primary);
 }

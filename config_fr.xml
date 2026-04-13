@@ -2,7 +2,7 @@
 <module>
     <name>pc_packvariants</name>
     <displayName><![CDATA[Pack Variants]]></displayName>
-    <version><![CDATA[0.0.1]]></version>
+    <version><![CDATA[0.0.2]]></version>
     <description><![CDATA[Link pack products together as variants (bidirectional).]]></description>
     <author><![CDATA[Phar&egrave;s CHAKOUR]]></author>
     <tab><![CDATA[front_office_features]]></tab>
